@@ -1,0 +1,19 @@
+.default {
+  background-color: blue;
+}
+
+.normalize {
+  background-color: red;
+}
+
+.variable {
+  background-color: green;
+}
+
+.webfonts {
+  background-color: yellow;
+}
+
+body {
+  background-color: aqua;
+}/*# sourceMappingURL=style.css.map */
