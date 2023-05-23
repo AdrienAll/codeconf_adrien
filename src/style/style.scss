@@ -2,6 +2,6 @@
 @import "_normalize.scss";
 @import "_variable.scss";
 @import "_webfonts.scss";
-body{
-  background-color: aqua;
-}
+@import "_nav.scss";
+@import "_teaser.scss";
+@import "speaker.scss";

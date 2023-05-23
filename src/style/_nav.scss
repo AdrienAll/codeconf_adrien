@@ -1,0 +1,22 @@
+.nav{
+  display: flex;
+  padding: 1rem;
+  &__logo{
+    margin-inline-end: auto;
+
+  }
+  &__burger{
+    display: none;
+
+  }
+
+}
+.breadcrumb{
+  display: flex;
+  &__fraction{
+    margin: 0;
+    margin-inline:0.5rem ;
+    
+  }
+
+}

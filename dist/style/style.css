@@ -6,14 +6,48 @@
   background-color: red;
 }
 
-.variable {
-  background-color: green;
-}
-
 .webfonts {
   background-color: yellow;
 }
 
-body {
-  background-color: aqua;
+.nav {
+  display: flex;
+  padding: 1rem;
+}
+.nav__logo {
+  margin-inline-end: auto;
+}
+.nav__burger {
+  display: none;
+}
+
+.breadcrumb {
+  display: flex;
+}
+.breadcrumb__fraction {
+  margin: 0;
+  margin-inline: 0.5rem;
+}
+
+.teaser__background {
+  background-color: mediumslateblue;
+  width: 100%;
+  height: 10rem;
+}
+.speaker {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.speaker__time {
+  display: flex;
+}
+.speaker__time__btn {
+  margin-inline-start: auto;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.speaker__time a {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
