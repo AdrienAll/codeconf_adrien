@@ -27,31 +27,35 @@
         <p>B</p>
     </nav>
       <div class="teaser">
-        <h1>Speaker Edition 2023</h1>
+        <!-- a revoir -->
+        <h1  class="teaser__slogan">Speaker Edition 2023</h1>
         <img src="/dist/image/speaker_picture/presents.png" alt="speaker" class="teaser__image">
         <div class="teaser__background"></div>
       </div>
   </header>
   <main>
     <div class="breadcrumb">
+      <!-- css voir navigation -->
       <a href="#">house</a>
       <p class="breadcrumb__fraction">|</p>
       <a href="#">Speakers</a>
     </div>
     <div class="speaker">
-      <div class="speaker__profil">
-        <h2>Chris Coyier</h2>
-        <p>Milwaukee, WI</p>
-        <img src="" alt="" class="speaker__profil__photo">
-      </div>
-      <div class="speaker__description">
-        <h3>The All-Powerful Front-End Developer</h3>
-        <p>Without servers, we'd have no way to share our creations with the world</p>
-      </div>
-      <div class="speaker__time">
-        <p>09:30 am |</p>
-        <a href="#">R2</a>
-        <bouton class="speaker__time__btn"><a href="#">About</a></bouton>
+      <div class="speaker__card">
+        <div class="speaker__card__profil">
+          <h2>Chris Coyier</h2>
+          <p>Milwaukee, WI</p>
+          <img src="" alt="" class="speaker__card__profil__photo">
+        </div>
+        <div class="speaker__card__description">
+          <h3>The All-Powerful Front-End Developer</h3>
+          <p>Without servers, we'd have no way to share our creations with the world</p>
+        </div>
+        <div class="speaker__card__time">
+          <p>09:30 am |</p>
+          <a href="#">R2</a>
+          <button class="speaker__card__time__btn"><a href="#">About</a></button>
+        </div>
       </div>
     </div>
   </main>
@@ -78,19 +82,21 @@
     <p>The Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
     <p>Helpdesk Call-center +1 702-892-0711</p>
     <a>(speaker’s support)</a>
-    <div class="footer__Sponsors">
-      <img src="" alt="Cisco">
-      <img src="" alt="Amazon Web Services">
-      <img src="" alt="Nickelodeon">
-      <img src="" alt="Meetup">
-      <img src="" alt="Stripe">
-      <img src="" alt="MailChimp">
+    <div class="footer__sponsor">
+      <img src="/dist/image/logo/cisco.svg" alt="Cisco">
+      <img src="/dist/image/logo/amazon_s3.svg" alt="Amazon Web Services">
+      <img src="/dist/image/logo/nick.svg" alt="Nickelodeon">
+      <img src="/dist/image/logo/meetup.svg" alt="Meetup">
+      <img src="/dist/image/logo/stripe.svg" alt="Stripe">
+      <img src="/dist/image/logo/mailchimp.svg" alt="MailChimp">
     </div> 
-    <span class="footer__separateur"></span>
+    <div class="footer__separateur"></div>
     <p>Follow us</p>
-    <a>@codeconf2023</a>
-    <a>#codeconf2023</a>
-    <span class="footer__separateur"></span>
+    <div class="footer__social">
+      <a>@codeconf2023</a>
+      <a>#codeconf2023</a>
+    </div>
+    <div class="footer__separateur"></div>
     <p>organised by WebeesMeetups.com</p>
     <p>Copyright 2022</p>
   </footer>

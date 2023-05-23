@@ -1,0 +1,27 @@
+.footer{
+  background-color: grey;
+  padding:1rem ;
+  &__location{
+    border: 1px solid black;
+    text-align: center;
+
+  }
+  &__sponsor
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__sponsor img {
+    width: 33%;
+  }
+  &__separateur{
+    width: 100%;
+    height: 1px;
+    background-color: white;
+
+  }
+  &__social{
+    display: flex;
+
+  }
+}

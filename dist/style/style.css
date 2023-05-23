@@ -1,5 +1,6 @@
-.default {
-  background-color: blue;
+button {
+  padding: 0.5rem;
+  border-radius: 15%/50%;
 }
 
 .normalize {
@@ -29,25 +30,60 @@
   margin-inline: 0.5rem;
 }
 
+.teaser {
+  display: grid;
+  grid-template: 33% 33% 33%/50% 50%;
+}
+.teaser__slogan {
+  grid-area: 2/1/2/2;
+}
 .teaser__background {
   background-color: mediumslateblue;
   width: 100%;
   height: 10rem;
+  grid-area: 1/1/2/2;
 }
+.teaser__image {
+  grid-area: 1/1/3/2;
+}
+
 .speaker {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
 }
-.speaker__time {
+.speaker__card__time {
   display: flex;
+  justify-content: baseline;
 }
-.speaker__time__btn {
+.speaker__card__time__btn {
   margin-inline-start: auto;
   border: 1px solid black;
-  border-radius: 30px;
+}
+.speaker__card__time p {
+  margin: 0;
 }
 
-.speaker__time a {
-  margin: 0;
+.footer {
+  background-color: grey;
+  padding: 1rem;
+}
+.footer__location {
+  border: 1px solid black;
+  text-align: center;
+}
+.footer__sponsor {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__sponsor img {
+  width: 33%;
+}
+.footer__separateur {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.footer__social {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

@@ -1,12 +1,21 @@
 .teaser {
-
+  display: grid;
+  grid-template: 33% 33% 33%/ 50% 50%;
+  &__slogan {
+    grid-area: 2/1/2/2;
+    // a ajuster avec les colones et l'order
+  }
   &__background{
     background-color:mediumslateblue ;
     width: 100%;
     height: 10rem;
+    grid-area: 1/1/2/2;
+
+
 
   }
   &__image {
+    grid-area: 1/1/3/2;
 
 
   }

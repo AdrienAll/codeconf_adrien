@@ -1,0 +1,26 @@
+.speaker{
+  display: flex;
+  flex-direction: column;
+  border:1px solid black;
+  &__card{
+    &__profil{
+
+    }
+    &__description{
+      
+    }
+    &__time{
+      display: flex;
+      justify-content: baseline;
+  
+      &__btn{
+        margin-inline-start: auto;
+        border: 1px solid black;
+      }
+    }
+    &__time p{
+      margin: 0;
+    }
+  }
+
+}
