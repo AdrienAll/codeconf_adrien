@@ -9,22 +9,24 @@
 <body>
   <header>
     <nav class="nav">
+     <ul>
       <img src="/dist/image/logo/logo2023.svg" alt="logo codeconf" class="nav__logo">
       <div class="nav__burger">
-          <p>Schedule</p>
-          <p>|</p>
-          <p>Event</p>
-          <p>| </p>
-          <p>Speakers</p>
-          <p>| </p>
-          <p>Team</p>
-          <p>| </p>
-          <p>Contact</p>
-          <p>| </p>
-          <p>Search</p>
+          <li><a href="#">Schedule</a></li>
+          <li>|</li>
+          <li><a href="#">Event</a></li>
+          <li>|</li>
+          <li><a href="#">Speakers</a></li>
+          <li>| </li>
+          <li><a href="#">Team</a></li>
+          <li>| </li>
+          <li><a href="#">Contact</a></li>
+          <li>| </li>
+          <li><a href="#">Search</a></li>
       </div>
-        <p>S</p>
-        <p>B</p>
+        <li><a href="#"><i class="icon-schedule"></i></a></li>
+        <li><a href="#"><i class="icon-burger"></i></a></li>
+     </ul> 
     </nav>
       <div class="teaser">
         <!-- a revoir -->
@@ -36,43 +38,66 @@
   <main>
     <div class="breadcrumb">
       <!-- css voir navigation -->
-      <a href="#">house</a>
+      <a href="#"><i class="icon-home"></i></a>
       <p class="breadcrumb__fraction">|</p>
       <a href="#">Speakers</a>
     </div>
-    <div class="speaker">
-      <div class="speaker__card">
-        <div class="speaker__card__profil">
-          <h2>Chris Coyier</h2>
-          <p>Milwaukee, WI</p>
-          <img src="" alt="" class="speaker__card__profil__photo">
-        </div>
-        <div class="speaker__card__description">
-          <h3>The All-Powerful Front-End Developer</h3>
-          <p>Without servers, we'd have no way to share our creations with the world</p>
-        </div>
-        <div class="speaker__card__time">
-          <p>09:30 am |</p>
-          <a href="#">R2</a>
-          <button class="speaker__card__time__btn"><a href="#">About</a></button>
-        </div>
-      </div>
-    </div>
+    <ul class="speaker">
+      <li class="speaker__card">
+         <div class="speaker__card__profil">
+           <h2>Chris <strong>Coyier</strong></h2>
+           <p>Milwaukee, WI</p>
+           <img src="" alt="" class="speaker__card__profil__photo">
+         </div>
+         <div class="speaker__card__description">
+           <h3>The All-Powerful Front-End Developer</h3>
+           <p>Without servers, we'd have no way to share our creations with the world</p>
+         </div>
+         <div class="speaker__card__time">
+           <p>09:30 am |</p>
+           <a href="#">R2</a>
+           <button class="speaker__card__time__btn"><a href="#">About</a></button>
+         </div>
+      </li>
+    </ul>
   </main>
   <section class="formspeaker">
     <h1>Become speaker</h1>
     <h2>Do you have a topic that you like?</h2>
     <p>Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</p>
-    <div class="formspeaker__input">
-      <input></input>
-      <input></input>
-      <input></input>
-      <input></input>
-      <input type="text">
-    </div>
-    <button>Send Your Subject</button>
+      <form method="get" id="myform" autocomplete="on">
+        <fieldset>
+          <div class="formspeaker__input">
+            <label for="userName">Name</label>
+            <input type="text" name="user-name" id="user-name" required autocomplete="family-name">
+            <!-- <p>*</p> add with after--> 
+          </div>
+          <div class="formspeaker__input">
+            <label for="user-mail">Mail</label>
+            <input type="email" name="user-mail" id="user-mail" required autocomplete="email">
+            <!-- <p>*</p> add with after--> 
+          </div>
+          <div class="formspeaker__input">
+            <label for="user-subject">Your Subject</label>
+            <input type="text" name="user-subject" id="user-subject">
+            <!-- <p>*</p> add with after--> 
+          </div>
+          <div class="formspeaker__input">
+            <label for="user-keyword">Keywords</label>
+            <input type="text" name="user-keyword" id="user-keyword">
+            <!-- <p>* [separate by comma]</p> add with after--> 
+          </div>
+          <div class="formspeaker__input">
+            <label for="user-detail">Short details</label>
+            <input type="text" name="user-detail" id="user-detail">
+            <!-- <p>* [separate by comma]</p> add with after--> 
+          </div>
+        </fieldset>
+
+    <button type="submit" id="btnSubmit">Send Your Subject</button>
     <p>or just participate to the present event</p>
-    <button>get ticket</button>
+    <button>get ticket<i class="icon-paypal"></i><i class="icon-card"></i></button>
+    <p class="formspeaker__price">$199 USD</p>
   </section>
   <footer class="footer">
     <h1>  The Las Vegas Convention Center</h1>
@@ -93,8 +118,8 @@
     <div class="footer__separateur"></div>
     <p>Follow us</p>
     <div class="footer__social">
-      <a>@codeconf2023</a>
-      <a>#codeconf2023</a>
+      <a href="#"><i class="icon-tw"></i>@codeconf2023</a>
+      <a href="#"><i class="icon-slack"></i>#codeconf2023</a>
     </div>
     <div class="footer__separateur"></div>
     <p>organised by WebeesMeetups.com</p>

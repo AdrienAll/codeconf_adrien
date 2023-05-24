@@ -3,23 +3,45 @@ button {
   border-radius: 15%/50%;
 }
 
+h1 {
+  font-family: maven;
+  font-variation-settings: "wght" 400;
+}
+
 .normalize {
   background-color: red;
 }
 
-.webfonts {
-  background-color: yellow;
+@font-face {
+  font-family: maven;
+  src: url("webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format "truetype-variations";
+  font-variation-settings: "wght" 400, "wght" 900;
 }
-
+@font-face {
+  font-family: icon;
+  src: url("webfonts/codeconf-all/fonts/codeconf.woff") format("woff");
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .nav {
-  display: flex;
   padding: 1rem;
 }
 .nav__logo {
   margin-inline-end: auto;
+  max-width: 25%;
 }
 .nav__burger {
   display: none;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav li {
+  margin-inline: 0.5rem;
 }
 
 .breadcrumb {
@@ -31,26 +53,41 @@ button {
 }
 
 .teaser {
+  width: 100%;
+  max-height: 50vh;
   display: grid;
-  grid-template: 33% 33% 33%/50% 50%;
+  grid-template-columns: 50% 50%;
 }
 .teaser__slogan {
-  grid-area: 2/1/2/2;
+  grid-area: 3/1/4/3;
+  order: 1;
+  font-size: 1.5rem;
 }
 .teaser__background {
   background-color: mediumslateblue;
-  width: 100%;
-  height: 10rem;
-  grid-area: 1/1/2/2;
+  height: 100%;
+  grid-area: 2/1/4/3;
+  order: -1;
 }
 .teaser__image {
-  grid-area: 1/1/3/2;
+  grid-area: 1/1/4/3;
+  width: 55%;
 }
 
 .speaker {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  margin: 0%;
+  list-style: none;
+  padding: 0%;
+}
+.speaker__card {
+  list-style: none;
+}
+.speaker__card__profil h2 {
+  display: flex;
+  flex-direction: column;
 }
 .speaker__card__time {
   display: flex;
@@ -86,4 +123,94 @@ button {
 }
 .footer__social {
   display: flex;
+}
+
+.icon-burger:before {
+  content: "\e93e";
+  font-family: icon;
+}
+
+.icon-schedule:before {
+  content: "\e93f";
+  font-family: icon;
+}
+
+.icon-loop:before {
+  content: "\e940";
+  font-family: icon;
+}
+
+.icon-contact:before {
+  content: "\e941";
+  font-family: icon;
+}
+
+.icon-event:before {
+  content: "\e942";
+  font-family: icon;
+}
+
+.icon-home:before {
+  content: "\e943";
+  font-family: icon;
+}
+
+.icon-card:before {
+  content: "\e944";
+  font-family: icon;
+}
+
+.icon-paypal:before {
+  content: "\e945";
+  font-family: icon;
+}
+
+.icon-tw:before {
+  content: "\e946";
+  font-family: icon;
+}
+
+.icon-slack:before {
+  content: "\e947";
+  font-family: icon;
+}
+
+.icon-heart_full:before {
+  content: "\e948";
+  font-family: icon;
+}
+
+.icon-heart_line:before {
+  content: "\e949";
+  font-family: icon;
+}
+
+.icon-square_full:before {
+  content: "\e94a";
+  font-family: icon;
+}
+
+.icon-square_line:before {
+  content: "\e94b";
+  font-family: icon;
+}
+
+.icon-spade_full:before {
+  content: "\e94c";
+  font-family: icon;
+}
+
+.icon-spade_line:before {
+  content: "\e94d";
+  font-family: icon;
+}
+
+.icon-clover_full:before {
+  content: "\e94e";
+  font-family: icon;
+}
+
+.icon-clover_line:before {
+  content: "\e94f";
+  font-family: icon;
 }/*# sourceMappingURL=style.css.map */

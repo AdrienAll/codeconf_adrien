@@ -1,15 +1,19 @@
 .nav{
-  display: flex;
   padding: 1rem;
   &__logo{
     margin-inline-end: auto;
-
+    max-width: 25%;
   }
   &__burger{
     display: none;
-
   }
-
+}
+.nav ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav li{
+  margin-inline: .5rem;
 }
 .breadcrumb{
   display: flex;
