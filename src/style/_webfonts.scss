@@ -2,7 +2,6 @@
   font-family: maven;
   src: url("webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format ("truetype-variations");
   font-variation-settings: 'wght'400,'wght'900, ;
-
 }
 @font-face {
   font-family: icon;
@@ -11,6 +10,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face{
+  font-family: leaguespartan;
+  src: url("webfonts/leaguespartan/LeagueSpartanVariable.woff2") format ("truetype-variations");
+  font-variation-settings: 'wght'100,'wght'900, ;
+
+}
 
 // @font-face{
 //   font-family: maven;
@@ -18,9 +23,4 @@
 //   font-variation-settings: 'wght'400,'wght'900, ;
 
 // }
-// @font-face{
-//   font-family: leaguespartan;
-//   src: url("webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format ("truetype-variations");
-//   font-variation-settings: 'wght'400,'wght'900, ;
 
-// }

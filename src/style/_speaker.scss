@@ -1,27 +1,28 @@
 .speaker{
-  display: flex;
-  flex-direction: column;
-  border:1px solid black;
-  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(13rem,1fr)); 
+  margin-inline: 1rem;
   list-style: none;
   padding: 0%;
-  
+  gap: 1rem;
   &__card{
+    border:1px solid black;
     list-style: none;
+    aspect-ratio: 0.75;
+    padding: 1rem;
     &__profil{
-
+      display: flex;
+      justify-content: space-between;
     }
     &__profil h2{
       display: flex;
       flex-direction: column;
     }
     &__description{
-      
     }
     &__time{
       display: flex;
       justify-content: baseline;
-  
       &__btn{
         margin-inline-start: auto;
         border: 1px solid black;
@@ -31,5 +32,11 @@
       margin: 0;
     }
   }
-
+  }
+.speaker img{
+  height: 30%;
+  width: 30%;
+  border-radius: 100%;
+  align-self: center;
+  margin-inline-end:1rem ;
 }

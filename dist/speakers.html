@@ -29,7 +29,6 @@
      </ul> 
     </nav>
       <div class="teaser">
-        <!-- a revoir -->
         <h1  class="teaser__slogan">Speaker Edition 2023</h1>
         <img src="/dist/image/speaker_picture/presents.png" alt="speaker" class="teaser__image">
         <div class="teaser__background"></div>
@@ -45,9 +44,65 @@
     <ul class="speaker">
       <li class="speaker__card">
          <div class="speaker__card__profil">
-           <h2>Chris <strong>Coyier</strong></h2>
-           <p>Milwaukee, WI</p>
-           <img src="" alt="" class="speaker__card__profil__photo">
+           <div class="speaker__card__profil__info">
+             <h2>Chris <strong>Coyier</strong></h2>
+             <p>Milwaukee, WI</p>
+           </div>
+           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
+         </div>
+         <div class="speaker__card__description">
+           <h3>The All-Powerful Front-End Developer</h3>
+           <p>Without servers, we'd have no way to share our creations with the world</p>
+         </div>
+         <div class="speaker__card__time">
+           <p>09:30 am |</p>
+           <a href="#">R2</a>
+           <button class="speaker__card__time__btn"><a href="#">About</a></button>
+         </div>
+      </li>
+      <li class="speaker__card">
+         <div class="speaker__card__profil">
+           <div class="speaker__card__profil__info">
+             <h2>Chris <strong>Coyier</strong></h2>
+             <p>Milwaukee, WI</p>
+           </div>
+           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
+         </div>
+         <div class="speaker__card__description">
+           <h3>The All-Powerful Front-End Developer</h3>
+           <p>Without servers, we'd have no way to share our creations with the world</p>
+         </div>
+         <div class="speaker__card__time">
+           <p>09:30 am |</p>
+           <a href="#">R2</a>
+           <button class="speaker__card__time__btn"><a href="#">About</a></button>
+         </div>
+      </li>
+      <li class="speaker__card">
+         <div class="speaker__card__profil">
+           <div class="speaker__card__profil__info">
+             <h2>Chris <strong>Coyier</strong></h2>
+             <p>Milwaukee, WI</p>
+           </div>
+           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
+         </div>
+         <div class="speaker__card__description">
+           <h3>The All-Powerful Front-End Developer</h3>
+           <p>Without servers, we'd have no way to share our creations with the world</p>
+         </div>
+         <div class="speaker__card__time">
+           <p>09:30 am |</p>
+           <a href="#">R2</a>
+           <button class="speaker__card__time__btn"><a href="#">About</a></button>
+         </div>
+      </li>
+      <li class="speaker__card">
+         <div class="speaker__card__profil">
+           <div class="speaker__card__profil__info">
+             <h2>Chris <strong>Coyier</strong></h2>
+             <p>Milwaukee, WI</p>
+           </div>
+           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
          </div>
          <div class="speaker__card__description">
            <h3>The All-Powerful Front-End Developer</h3>
@@ -68,29 +123,24 @@
       <form method="get" id="myform" autocomplete="on">
         <fieldset>
           <div class="formspeaker__input">
-            <label for="userName">Name</label>
-            <input type="text" name="user-name" id="user-name" required autocomplete="family-name">
-            <!-- <p>*</p> add with after--> 
+            <label class="formspeaker__label" for="user-name">Name</label>
+            <input class="formspeaker__label" type="text" name="user-name" id="user-name" required autocomplete="family-name">
           </div>
           <div class="formspeaker__input">
-            <label for="user-mail">Mail</label>
+            <label class="formspeaker__label" for="user-mail">Mail</label>
             <input type="email" name="user-mail" id="user-mail" required autocomplete="email">
-            <!-- <p>*</p> add with after--> 
           </div>
           <div class="formspeaker__input">
-            <label for="user-subject">Your Subject</label>
+            <label class="formspeaker__label" for="user-subject">Your Subject</label>
             <input type="text" name="user-subject" id="user-subject">
-            <!-- <p>*</p> add with after--> 
           </div>
           <div class="formspeaker__input">
-            <label for="user-keyword">Keywords</label>
-            <input type="text" name="user-keyword" id="user-keyword">
-            <!-- <p>* [separate by comma]</p> add with after--> 
+            <label class="formspeaker__input__userkeyword" for="user-keyword">Keywords</label>
+            <input  type="text" name="user-keyword" id="user-keyword">
           </div>
           <div class="formspeaker__input">
-            <label for="user-detail">Short details</label>
+            <label class="formspeaker__label" for="user-detail">Short details</label>
             <input type="text" name="user-detail" id="user-detail">
-            <!-- <p>* [separate by comma]</p> add with after--> 
           </div>
         </fieldset>
 

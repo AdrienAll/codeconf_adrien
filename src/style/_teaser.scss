@@ -1,32 +1,27 @@
 .teaser {
   width: 100%;
-  max-height: 50vh;
   display: grid;
-  // grid-template-rows:calc('100/3') ;
-  grid-template-columns: 50% 50%;
+  grid-template-rows:$tier-value $tier-value $tier-value ;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  // grid-template-rows: @include $tier-value;
   // noter les colonnes et les lignes
   //utiliser une mixin et une fonction calcul pour les 33%
   &__slogan {
-    grid-area: 3/1/4/3;
+    grid-area: 2/1/4/4;
     order: 1;
     font-size: 1.5rem;
-
-    
+    margin-block:0 ;
+    margin-inline-start:1rem ;
+    color: white;
     // a ajuster avec les colones et l'order
   }
   &__background{
-    background-color:mediumslateblue ;
-    height: 100%;
-    grid-area: 2/1/4/3;
+    background-color:$color ;
+    grid-area: 2/1/4/6;
     order: -1;
-
-
-
   }
   &__image {
-    grid-area: 1/1/4/3;
-    width: 55%;
-
-
+    grid-area: 1/2/4/6;
+    max-width: 50%;
   }
 }
