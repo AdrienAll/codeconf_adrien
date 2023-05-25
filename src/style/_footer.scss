@@ -1,26 +1,81 @@
 .footer{
   background-color: $color-footer;
-  padding:1rem ;
+  padding:2rem ;
   color: white;
-  &__location{
+  & h1{
+    margin-block-start: 3.5rem;
+  }
+  &__info__location{
     border: 1px solid black;
     text-align: center;
     // border-radius: ;
   }
-  &__sponsor{
+  &__sponsor__box{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 1rem;
+    justify-content: space-around;
   }
   &__sponsor img{
-    width: 30%;
+    width: 25%;
   }
   &__separateur{
     width: 100%;
     height: 1px;
     background-color: white;
   }
-  &__social{
+  &__social__element{
     display: flex;
   }
+  &__centre{
+    display: none;
+  }
+}
+@media only screen and (min-width: 1000px){
+  .footer{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-template-rows: $tier-value $tier-value $tier-value ;
+    gap: 1rem;
+    & h1{
+      margin: 0;
+    }
+    &__info{
+      grid-area: 1/1/1/3;
+      &__location{
+        border: none;
+        text-align: left;
+      }
+    }
+    &__centre{
+      display: block;
+      width: 100%;
+      grid-area: 1/3/1/5;
+    }
+    &__sponsor{
+      display: flex;
+      grid-area: 2/1/2/5;
+      & img {
+        width: 15%;
+      }
+    }
+    &__social{
+      grid-area: 3/1/3/3;
+      &__element{
+        justify-content: space-between;
+      }
+    }
+    &__helpdesk{
+      grid-area: 3/3/3/4;
+    }
+    &__organisateur{
+      grid-area: 3/4/3/5;
+    }
+    &__separateur{
+      display: none;
+    }
+
+
+  }
+
 }

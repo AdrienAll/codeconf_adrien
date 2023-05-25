@@ -10,6 +10,9 @@
       &__profil{
         display: flex;
         justify-content: space-between;
+        &__info p{
+            color: $color-grey;
+        }
       }
       &__profil h2{
         display: flex;
@@ -43,7 +46,7 @@
       margin-inline-end:1rem ;
     }
   }
- 
+
 
 @media only screen and (min-width: 1000px){
   .speaker{

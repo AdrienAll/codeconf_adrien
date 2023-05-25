@@ -159,6 +159,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.speaker__card__profil__info p {
+  color: #dadada;
+}
 .speaker__card__profil h2 {
   display: flex;
   flex-direction: column;
@@ -212,33 +215,110 @@ body {
 }
 .footer {
   background-color: #343237;
-  padding: 1rem;
+  padding: 2rem;
   color: white;
 }
-.footer__location {
+.footer h1 {
+  margin-block-start: 3.5rem;
+}
+.footer__info__location {
   border: 1px solid black;
   text-align: center;
 }
-.footer__sponsor {
+.footer__sponsor__box {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 1rem;
+  justify-content: space-around;
 }
 .footer__sponsor img {
-  width: 30%;
+  width: 25%;
 }
 .footer__separateur {
   width: 100%;
   height: 1px;
   background-color: white;
 }
-.footer__social {
+.footer__social__element {
   display: flex;
 }
+.footer__centre {
+  display: none;
+}
 
+@media only screen and (min-width: 1000px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.3333333333% 33.3333333333% 33.3333333333%;
+    gap: 1rem;
+  }
+  .footer h1 {
+    margin: 0;
+  }
+  .footer__info {
+    grid-area: 1/1/1/3;
+  }
+  .footer__info__location {
+    border: none;
+    text-align: left;
+  }
+  .footer__centre {
+    display: block;
+    width: 100%;
+    grid-area: 1/3/1/5;
+  }
+  .footer__sponsor {
+    display: flex;
+    grid-area: 2/1/2/5;
+  }
+  .footer__sponsor img {
+    width: 15%;
+  }
+  .footer__social {
+    grid-area: 3/1/3/3;
+  }
+  .footer__social__element {
+    justify-content: space-between;
+  }
+  .footer__helpdesk {
+    grid-area: 3/3/3/4;
+  }
+  .footer__organisateur {
+    grid-area: 3/4/3/5;
+  }
+  .footer__separateur {
+    display: none;
+  }
+}
 .formspeaker {
   text-align: center;
   margin-inline: 1rem;
+  margin-block-end: 3.5rem;
+}
+.formspeaker__ligne {
+  display: flex;
+  flex-direction: column;
+}
+.formspeaker__ligne__input {
+  display: flex;
+  flex-direction: column;
+  margin-block: 1rem;
+  width: 100%;
+}
+.formspeaker__ligne__input__label::after {
+  content: "*";
+  vertical-align: super;
+  font-size: 0.5rem;
+}
+.formspeaker__ligne__input__userkeyword::after {
+  content: "* [separate by comma] ";
+  vertical-align: super;
+  font-size: 0.5rem;
+}
+.formspeaker__ligne__input__block {
+  border: 0;
+  border-bottom: 1.5px #dadada solid;
 }
 .formspeaker__input {
   display: flex;
@@ -248,16 +328,7 @@ body {
 .formspeaker__input__detail {
   height: 4rem;
   padding: 1rem;
-}
-.formspeaker__input__label::after {
-  content: "*";
-  vertical-align: super;
-  font-size: 0.5rem;
-}
-.formspeaker__input__userkeyword::after {
-  content: "* [separate by comma] ";
-  vertical-align: super;
-  font-size: 0.5rem;
+  border: #dadada 1px solid;
 }
 .formspeaker__input__labeldetail {
   margin: 0.5rem 0 0 0.5rem;
@@ -267,14 +338,42 @@ body {
   vertical-align: super;
   font-size: 0.5rem;
 }
-.formspeaker__price {
-  margin: 0;
-  background-color: #343237;
+.formspeaker__submit {
+  color: #f74d1c;
+  border: 1px solid #f74d1c;
+  background-color: white;
+  padding-inline: 1.2rem;
 }
 
-.formspeaker__input__block {
+.ticket {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1rem;
+  margin-inline-start: -1rem;
+}
+.ticket__btn {
+  margin: auto;
+  background-color: #f74d1c;
   border: 0;
-  border-bottom: 1.5px black solid;
+  padding: 1rem 1.2rem 1rem 1.2rem;
+}
+.ticket__btn i {
+  margin-inline: 0.3rem;
+}
+.ticket__btn a {
+  color: white;
+}
+.ticket__btn__price {
+  margin: 0;
+  background-color: #343237;
+  width: fit-content;
+  padding: 0.2rem 0.7rem;
+  border-radius: 10%/50%;
+  font-size: 0.5rem;
+  color: white;
+  margin-inline: auto;
 }
 
 label {
@@ -292,6 +391,9 @@ fieldset {
 }
 
 @media only screen and (min-width: 1000px) {
+  .formspeaker {
+    margin-inline: 7rem;
+  }
   .formspeaker h1 {
     margin-block-end: 1rem;
   }
@@ -299,9 +401,15 @@ fieldset {
     margin-block: 0.5rem;
   }
   .formspeaker p {
-    margin-block-start: 0;
     margin-inline: auto;
-    width: 42%;
+  }
+  .formspeaker__ligne {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .ticket {
+    margin-inline-start: -112px;
   }
 }
 .icon-burger:before {

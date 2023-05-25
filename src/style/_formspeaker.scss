@@ -1,6 +1,35 @@
+
 .formspeaker{
   text-align: center;
   margin-inline: 1rem;
+  margin-block-end: 3.5rem;
+  
+  &__ligne{
+    display: flex;
+    flex-direction: column;
+    &__input{
+      display: flex;
+      flex-direction: column;
+      margin-block:1rem ;
+      width: 100%;
+      &__label::after{
+        content: "*";
+        vertical-align: super;
+        font-size: .5rem;
+      }
+      &__userkeyword::after{
+        content: "* [separate by comma] ";
+        vertical-align: super;
+        font-size: .5rem;
+      }
+      &__block {
+        border: 0;
+        border-bottom : 1.5px $color-grey solid;
+      }
+    }
+
+  }
+  // css pour le dernier input
   &__input{
     display: flex;
     flex-direction: column;
@@ -8,21 +37,10 @@
     &__detail{
       height: 4rem;
       padding: 1rem;
-
-    }
-    &__label::after{
-      content: "*";
-      vertical-align: super;
-      font-size: .5rem;
-    }
-    &__userkeyword::after{
-      content: "* [separate by comma] ";
-      vertical-align: super;
-      font-size: .5rem;
+      border: $color-grey 1px solid;
     }
     &__labeldetail{
       margin: .5rem 0 0 .5rem;
-
     }
     &__labeldetail::after{
       content: "*";
@@ -30,17 +48,46 @@
       font-size: .5rem;
     }
   }
-  &__price{
-    margin: 0;
-    background-color:$color-footer;
-    // border-radius: ;
+   &__submit{
+     color: $color-btn;
+     border:  1px solid $color-btn;
+     background-color: white;
+     padding-inline:1.2rem ;
+   }
+  }
+
+.ticket{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-block-start: 1rem;
+  margin-inline-start: -1rem;
+
+  &__btn{
+    margin: auto;
+    background-color: $color-btn;
+    border: 0;
+    padding: 1rem 1.2rem 1rem 1.2rem;
+    & i {
+      margin-inline: .3rem;
+    }
+    & a {
+      color: white;
+    }
+   &__price{
+     margin: 0;
+     background-color:$color-footer;
+     width: fit-content;
+     padding: .2rem .7rem ;
+     border-radius: 10% / 50%;
+     font-size: .5rem;
+     color: white;
+     margin-inline: auto;
+   }
   }
 }
-.formspeaker__input__block {
-  border: 0;
-  border-bottom : 1.5px black solid;
 
-}
 label {
   position:absolute;
   transition: all .2s;
@@ -54,17 +101,24 @@ fieldset{
 }
 @media only screen and (min-width: 1000px){
   .formspeaker{
+    margin-inline: 7rem;
     & h1 {
       margin-block-end: 1rem;
     }
     & h2 {
       margin-block:.5rem ;
-
     }
     & p {
-      margin-block-start:0 ;
       margin-inline: auto;
-      width: 42%;
     }
+    // changement txt form large
+    &__ligne{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+  .ticket{
+    margin-inline-start: -112px;
   }
 }
