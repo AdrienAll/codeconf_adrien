@@ -10,10 +10,8 @@
   <header>
     <nav class="nav">
      <ul>
-      <img src="/dist/image/logo/logo2023.svg" alt="logo codeconf" class="nav__logo">
+      <li class="nav__logo"><img src="/dist/image/logo/logo2023.svg" alt="logo codeconf" ></li>
       <div class="nav__burger">
-          <li><a href="#">Schedule</a></li>
-          <li>|</li>
           <li><a href="#">Event</a></li>
           <li>|</li>
           <li><a href="#">Speakers</a></li>
@@ -22,10 +20,12 @@
           <li>| </li>
           <li><a href="#">Contact</a></li>
           <li>| </li>
-          <li><a href="#">Search</a></li>
       </div>
         <li><a href="#"><i class="icon-schedule"></i></a></li>
-        <li><a href="#"><i class="icon-burger"></i></a></li>
+        <li class="nav__schedule"><a href="#">Schedule</a></li>
+        <li class="nav__iconburger"><a href="#"><i class="icon-burger"></i></a></li>
+        <li class="nav__loop"><a href="#"><i class="icon-loop"></i></a></li>
+
      </ul> 
     </nav>
       <div class="teaser">
@@ -123,24 +123,24 @@
       <form method="get" id="myform" autocomplete="on">
         <fieldset>
           <div class="formspeaker__input">
-            <label class="formspeaker__label" for="user-name">Name</label>
-            <input class="formspeaker__label" type="text" name="user-name" id="user-name" required autocomplete="family-name">
+            <label class="formspeaker__input__label" for="user-name">Name</label>
+            <input class="formspeaker__input__block" type="text" name="user-name" id="user-name" required autocomplete="family-name">
           </div>
           <div class="formspeaker__input">
-            <label class="formspeaker__label" for="user-mail">Mail</label>
-            <input type="email" name="user-mail" id="user-mail" required autocomplete="email">
+            <label class="formspeaker__input__label" for="user-mail">Mail</label>
+            <input class="formspeaker__input__block" type="email" name="user-mail" id="user-mail" required autocomplete="email">
           </div>
           <div class="formspeaker__input">
-            <label class="formspeaker__label" for="user-subject">Your Subject</label>
-            <input type="text" name="user-subject" id="user-subject">
+            <label class="formspeaker__input__label" for="user-subject">Your Subject</label>
+            <input class="formspeaker__input__block" type="text" name="user-subject" id="user-subject">
           </div>
           <div class="formspeaker__input">
             <label class="formspeaker__input__userkeyword" for="user-keyword">Keywords</label>
-            <input  type="text" name="user-keyword" id="user-keyword">
+            <input  class="formspeaker__input__block" type="text" name="user-keyword" id="user-keyword">
           </div>
           <div class="formspeaker__input">
-            <label class="formspeaker__label" for="user-detail">Short details</label>
-            <input type="text" name="user-detail" id="user-detail">
+            <label class="formspeaker__input__labeldetail" for="user-detail">Short details</label>
+            <input class="formspeaker__input__detail" type="text" name="user-detail" id="user-detail">
           </div>
         </fieldset>
 

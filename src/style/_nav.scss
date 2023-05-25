@@ -1,26 +1,64 @@
 .nav{
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   &__logo{
     margin-inline-end: auto;
-    max-width: 25%;
+    width: 30%;
   }
   &__burger{
     display: none;
   }
+  &__schedule{
+    display: none;
+  }
+  &__loop{
+    display: none;
+  }
+
+}
+.nav li {
+  margin-block: auto;
 }
 .nav ul {
   list-style-type: none;
   display: flex;
-}
-.nav li{
-  margin-inline: .5rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+
 }
 .breadcrumb{
   display: flex;
+  gap: .5rem;
+  margin: 1rem;
   &__fraction{
-    margin: 0;
-    margin-inline:0.5rem ;
-    
+    margin-block: 0;
   }
+}
+@media only screen and (min-width: 1000px){
+  .nav{
+    &__logo{
+      width: 10%;
+    }
+    &__burger{
+      display: flex;
+      align-content: center;
+      margin-inline-end: 1rem;
+      gap: 0.5rem;
 
+    }
+    &__iconburger{
+      display: none;
+    }
+    &__loop {
+      display: inline;
+      margin-inline: 1rem;
+    }
+    &__schedule{
+      display: inline;
+    }
+  }
+  .nav ul {
+    gap: .5rem;
+  }
 }

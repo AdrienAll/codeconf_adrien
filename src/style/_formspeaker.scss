@@ -5,25 +5,41 @@
     display: flex;
     flex-direction: column;
     margin-block:1rem ;
+    &__detail{
+      height: 4rem;
+      padding: 1rem;
+
+    }
+    &__label::after{
+      content: "*";
+      vertical-align: super;
+      font-size: .5rem;
+    }
     &__userkeyword::after{
       content: "* [separate by comma] ";
       vertical-align: super;
       font-size: .5rem;
     }
-    input{
-      border: none;
-      border-bottom: 1px solid black;  }
-  }
-  &__label::after{
-    content: "*";
-    vertical-align: super;
-    font-size: .5rem;
+    &__labeldetail{
+      margin: .5rem 0 0 .5rem;
+
+    }
+    &__labeldetail::after{
+      content: "*";
+      vertical-align: super;
+      font-size: .5rem;
+    }
   }
   &__price{
     margin: 0;
     background-color:$color-footer;
     // border-radius: ;
   }
+}
+.formspeaker__input__block {
+  border: 0;
+  border-bottom : 1.5px black solid;
+
 }
 label {
   position:absolute;
@@ -35,4 +51,20 @@ div:focus-within label {
 }
 fieldset{
   border: 0;
+}
+@media only screen and (min-width: 1000px){
+  .formspeaker{
+    & h1 {
+      margin-block-end: 1rem;
+    }
+    & h2 {
+      margin-block:.5rem ;
+
+    }
+    & p {
+      margin-block-start:0 ;
+      margin-inline: auto;
+      width: 42%;
+    }
+  }
 }

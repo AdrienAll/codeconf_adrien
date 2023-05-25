@@ -4,39 +4,120 @@
   margin-inline: 1rem;
   list-style: none;
   padding: 0%;
-  gap: 1rem;
-  &__card{
-    border:1px solid black;
-    list-style: none;
-    aspect-ratio: 0.75;
-    padding: 1rem;
-    &__profil{
-      display: flex;
-      justify-content: space-between;
-    }
-    &__profil h2{
-      display: flex;
-      flex-direction: column;
-    }
-    &__description{
-    }
-    &__time{
-      display: flex;
-      justify-content: baseline;
-      &__btn{
-        margin-inline-start: auto;
-        border: 1px solid black;
+  gap: 0.5rem;
+    &__card{
+      list-style: none;
+      &__profil{
+        display: flex;
+        justify-content: space-between;
+      }
+      &__profil h2{
+        display: flex;
+        flex-direction: column;
+      }
+      &__description{
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      &__time{
+        display: flex;
+        justify-content: baseline;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &__btn{
+          margin-inline-start: auto;
+          border: 1px solid black;
+        }
+      }
+      &__time p{
+        margin: 0;
       }
     }
-    &__time p{
-      margin: 0;
+    & img{
+      height: 30%;
+      width: 30%;
+      border-radius: 100%;
+      align-self: center;
+      margin-inline-end:1rem ;
     }
   }
+ 
+
+@media only screen and (min-width: 1000px){
+  .speaker{
+    gap: 2rem;
+     &__card{
+     border:1px solid black;
+     aspect-ratio: 0.75;
+
+
+     &__profil{
+       flex-direction: column;
+       &__photo{
+        order:-2;
+       }
+     }
+
+     &__description{
+     }
+     &__time{
+       &__btn{
+       }
+     }
+     &__time p{
+     }
+    }
+   
+    & img{
+      border-radius: 0;
+      width: 100%;
+      margin: 0 ;
+    }
   }
-.speaker img{
-  height: 30%;
-  width: 30%;
-  border-radius: 100%;
-  align-self: center;
-  margin-inline-end:1rem ;
 }
+
+
+// save
+// .speaker{
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit,minmax(13rem,1fr)); 
+//   margin-inline: 1rem;
+//   list-style: none;
+//   padding: 0%;
+//   gap: 1rem;
+//   &__card{
+//     list-style: none;
+//     aspect-ratio: 0.75;
+//     padding: 1rem;
+//     &__profil{
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//     &__profil h2{
+//       display: flex;
+//       flex-direction: column;
+//     }
+//     &__description{
+//     }
+//     &__time{
+//       display: flex;
+//       justify-content: baseline;
+//       &__btn{
+//         margin-inline-start: auto;
+//         border: 1px solid black;
+//       }
+//     }
+//     &__time p{
+//       margin: 0;
+//     }
+//   }
+//   }
+// .speaker img{
+//   height: 30%;
+//   width: 30%;
+//   border-radius: 100%;
+//   align-self: center;
+//   margin-inline-end:1rem ;
+// }

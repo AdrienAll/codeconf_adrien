@@ -10,9 +10,10 @@
   &__sponsor{
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
   }
   &__sponsor img{
-    width: 33%;
+    width: 30%;
   }
   &__separateur{
     width: 100%;
