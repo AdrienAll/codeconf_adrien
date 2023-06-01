@@ -5,12 +5,12 @@
   & h1{
     margin-block-start: 3.5rem;
   }
-  &__info__location{
+  &__location{
     border: 1px solid black;
     text-align: center;
     // border-radius: ;
   }
-  &__sponsor__box{
+  &__sponsor_box{
     width: 100%;
     display: flex;
     gap: 1rem;
@@ -24,7 +24,7 @@
     height: 1px;
     background-color: white;
   }
-  &__social__element{
+  &__social_element{
     display: flex;
   }
   &__centre{
@@ -34,18 +34,36 @@
 @media only screen and (min-width: 1000px){
   .footer{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25% ;
-    grid-template-rows: $tier-value $tier-value $tier-value ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
     gap: 1rem;
+    padding-block-start: 5rem;
     & h1{
+      font-family: $font-museo-large;
+      color: $color-footer-snd;
+      font-size: 1.5rem;
       margin: 0;
+      margin-block-end:.5rem ;
+
     }
     &__info{
       grid-area: 1/1/1/3;
-      &__location{
-        border: none;
-        text-align: left;
-      }
+    }
+    &__location{
+      border: none;
+      text-align: left;
+      font-family: $font-lp;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-block-end:.5rem ;
+    }
+    &__location_info{
+      border: none;
+      text-align: left;
+      font-family: $font-lp;
+      font-weight: 300;
+      line-height: 1.7rem;
+      font-size: 1.1rem;
     }
     &__centre{
       display: block;
@@ -61,10 +79,35 @@
     }
     &__social{
       grid-area: 3/1/3/3;
-      &__element{
-        justify-content: space-between;
+      border: 1px solid #dadada20;
+      padding: 2rem;
+      line-height: 2rem;
+      border-radius:5px/5px;
+      height: fit-content;
+      & p {
+        font-size: 1.3rem;
+        font-family: $font-museo-regular;
+        color: $color-footer-snd;
       }
     }
+    &__social_element{
+      justify-content: space-between;
+      
+      & a {
+        color: white;
+
+        display: flex;
+        align-content: center;
+        margin-block-start: 1rem;
+        font-family: $font-museo-regular;
+        font-size: 1.3rem;
+      }
+      & i {
+        margin-inline-end: .5rem;
+        font-size: 2rem;
+      }
+    }
+
     &__helpdesk{
       grid-area: 3/3/3/4;
     }

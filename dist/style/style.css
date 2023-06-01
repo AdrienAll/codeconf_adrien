@@ -1,11 +1,7 @@
-button {
-  padding: 0.5rem;
-  border-radius: 15%/50%;
-}
-
 h1 {
   font-size: 2rem;
   font-weight: normal;
+  margin: 0;
 }
 
 a {
@@ -24,6 +20,7 @@ h2 {
 
 p {
   font-size: 1rem;
+  margin: 0;
 }
 
 h3 {
@@ -39,8 +36,240 @@ body {
   margin: 0%;
 }
 
+/*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.15; /* 1. Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */
+  -moz-tab-size: 4; /* 3. Use a more readable tab size (opinionated). */
+  tab-size: 4; /* 3 */
+}
+
+/*
+Sections
+========
+*/
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+/*
+Grouping content
+================
+*/
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+
 @font-face {
-  font-family: maven;
+  font-family: "maven";
   src: url("webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format "truetype-variations";
   font-variation-settings: "wght" 400, "wght" 900;
 }
@@ -52,9 +281,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: leaguespartan;
-  src: url("webfonts/leaguespartan/LeagueSpartanVariable.woff2") format "truetype-variations";
-  font-variation-settings: "wght" 100, "wght" 900;
+  font-family: "leaguespartan";
+  src: url("webfonts/leaguespartan/LeagueSpartanVariable.ttf") format("ttf-variations"), url("webfonts/leaguespartan/LeagueSpartanVariable.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-variation-settings: "wght" 200, "wght" 900;
+}
+@font-face {
+  font-family: "museosmall";
+  src: url("webfonts/museo/museo300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "museoregular";
+  src: url("webfonts/museo/museo500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "museolarge";
+  src: url("webfonts/museo/museo700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 .nav {
   padding: 1rem 1rem 0 1rem;
@@ -155,34 +403,34 @@ body {
 .speaker__card {
   list-style: none;
 }
-.speaker__card__profil {
+.speaker__profil {
   display: flex;
   justify-content: space-between;
 }
-.speaker__card__profil__info p {
+.speaker__info p {
   color: #dadada;
 }
-.speaker__card__profil h2 {
+.speaker__profil h2 {
   display: flex;
   flex-direction: column;
 }
-.speaker__card__description {
+.speaker__description {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.speaker__card__time {
+.speaker__time {
   display: flex;
   justify-content: baseline;
   opacity: 0;
   width: 0;
   height: 0;
 }
-.speaker__card__time__btn {
+.speaker__btn {
   margin-inline-start: auto;
   border: 1px solid black;
 }
-.speaker__card__time p {
+.speaker__time p {
   margin: 0;
 }
 .speaker img {
@@ -201,10 +449,10 @@ body {
     border: 1px solid black;
     aspect-ratio: 0.75;
   }
-  .speaker__card__profil {
+  .speaker__profil {
     flex-direction: column;
   }
-  .speaker__card__profil__photo {
+  .speaker__photo {
     order: -2;
   }
   .speaker img {
@@ -221,11 +469,11 @@ body {
 .footer h1 {
   margin-block-start: 3.5rem;
 }
-.footer__info__location {
+.footer__location {
   border: 1px solid black;
   text-align: center;
 }
-.footer__sponsor__box {
+.footer__sponsor_box {
   width: 100%;
   display: flex;
   gap: 1rem;
@@ -239,7 +487,7 @@ body {
   height: 1px;
   background-color: white;
 }
-.footer__social__element {
+.footer__social_element {
   display: flex;
 }
 .footer__centre {
@@ -249,19 +497,36 @@ body {
 @media only screen and (min-width: 1000px) {
   .footer {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.3333333333% 33.3333333333% 33.3333333333%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
+    padding-block-start: 5rem;
   }
   .footer h1 {
+    font-family: "museolarge";
+    color: #0cbfc3;
+    font-size: 1.5rem;
     margin: 0;
+    margin-block-end: 0.5rem;
   }
   .footer__info {
     grid-area: 1/1/1/3;
   }
-  .footer__info__location {
+  .footer__location {
     border: none;
     text-align: left;
+    font-family: "leaguespartan";
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-block-end: 0.5rem;
+  }
+  .footer__location_info {
+    border: none;
+    text-align: left;
+    font-family: "leaguespartan";
+    font-weight: 300;
+    line-height: 1.7rem;
+    font-size: 1.1rem;
   }
   .footer__centre {
     display: block;
@@ -277,9 +542,31 @@ body {
   }
   .footer__social {
     grid-area: 3/1/3/3;
+    border: 1px solid rgba(218, 218, 218, 0.1254901961);
+    padding: 2rem;
+    line-height: 2rem;
+    border-radius: 5px/5px;
+    height: fit-content;
   }
-  .footer__social__element {
+  .footer__social p {
+    font-size: 1.3rem;
+    font-family: "museoregular";
+    color: #0cbfc3;
+  }
+  .footer__social_element {
     justify-content: space-between;
+  }
+  .footer__social_element a {
+    color: white;
+    display: flex;
+    align-content: center;
+    margin-block-start: 1rem;
+    font-family: "museoregular";
+    font-size: 1.3rem;
+  }
+  .footer__social_element i {
+    margin-inline-end: 0.5rem;
+    font-size: 2rem;
   }
   .footer__helpdesk {
     grid-area: 3/3/3/4;
@@ -299,41 +586,43 @@ body {
 .formspeaker__ligne {
   display: flex;
   flex-direction: column;
-}
-.formspeaker__ligne__input {
-  display: flex;
-  flex-direction: column;
-  margin-block: 1rem;
   width: 100%;
 }
-.formspeaker__ligne__input__label::after {
+.formspeaker__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-block: 1rem;
+}
+.formspeaker__label::after {
   content: "*";
   vertical-align: super;
   font-size: 0.5rem;
 }
-.formspeaker__ligne__input__userkeyword::after {
+.formspeaker__userkeyword::after {
   content: "* [separate by comma] ";
   vertical-align: super;
   font-size: 0.5rem;
 }
-.formspeaker__ligne__input__block {
+.formspeaker__block {
   border: 0;
   border-bottom: 1.5px #dadada solid;
 }
 .formspeaker__input {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-block: 1rem;
 }
-.formspeaker__input__detail {
+.formspeaker__detail {
   height: 4rem;
   padding: 1rem;
   border: #dadada 1px solid;
 }
-.formspeaker__input__labeldetail {
+.formspeaker__labeldetail {
   margin: 0.5rem 0 0 0.5rem;
 }
-.formspeaker__input__labeldetail::after {
+.formspeaker__labeldetail::after {
   content: "*";
   vertical-align: super;
   font-size: 0.5rem;
@@ -342,35 +631,39 @@ body {
   color: #f74d1c;
   border: 1px solid #f74d1c;
   background-color: white;
+  padding: 0.5rem;
+  border-radius: 1.5rem/1.75rem;
   padding-inline: 1.2rem;
 }
-
-.ticket {
+.formspeaker__ticket {
   position: absolute;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-block-start: 1rem;
   margin-inline-start: -1rem;
 }
-.ticket__btn {
+.formspeaker__ticket_btn {
   margin: auto;
   background-color: #f74d1c;
   border: 0;
-  padding: 1rem 1.2rem 1rem 1.2rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem/1.75rem;
+  padding-inline: 1.2rem;
+  padding-block: 1rem;
 }
-.ticket__btn i {
+.formspeaker__ticket_btn i {
   margin-inline: 0.3rem;
 }
-.ticket__btn a {
+.formspeaker__ticket_btn a {
   color: white;
 }
-.ticket__btn__price {
+.formspeaker__ticket_price {
   margin: 0;
   background-color: #343237;
   width: fit-content;
   padding: 0.2rem 0.7rem;
-  border-radius: 10%/50%;
+  border-radius: 1.5rem/1.75rem;
   font-size: 0.5rem;
   color: white;
   margin-inline: auto;
@@ -408,7 +701,7 @@ fieldset {
     flex-direction: row;
     gap: 1rem;
   }
-  .ticket {
+  .formspeaker__ticket {
     margin-inline-start: -112px;
   }
 }

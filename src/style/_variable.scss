@@ -1,8 +1,30 @@
+//color
 $color: #705ae9;
 $color-footer: #343237;
 $color-typo:#d9c8b8;
 $color-btn:#f74d1c;
 $color-grey:#dadada;
+$color-footer-snd:#0cbfc3;
+//value
 $tier-value:calc(100%/3);
-
-
+//font
+$font-maven:"maven";
+$font-lp:"leaguespartan";
+$font-museo-small:"museosmall";
+$font-museo-regular:"museoregular";
+$font-museo-large:"museolarge";
+//mixin
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@mixin afterform($afterform-value :.5rem){
+  vertical-align: super;
+  font-size:$afterform-value;
+}
+@mixin btn ($btn-pad:1.2rem){
+  padding: .5rem;
+  border-radius:1.5rem/1.75rem;
+  padding-inline:$btn-pad ;
+}
