@@ -1,20 +1,52 @@
+.footer_pad{
+  width: 100%;
+  padding-inline: 2rem;
+}
 .footer{
   background-color: $color-footer;
-  padding:2rem ;
+  padding-block:1.5rem ;
   color: white;
   & h1{
     margin-block-start: 3.5rem;
+    font-family: $font-museo-regular;
+    font-size: .9rem;
+    color: $color-typo ;
+    margin-block-end: .5rem;
   }
   &__location{
-    border: 1px solid black;
+    border: 1px solid #dadada20;
     text-align: center;
-    // border-radius: ;
+    font-family: $font-lp;
+    font-weight: 500;
+    font-size: .7rem;
+    border-radius:1.5rem/1.75rem;
+    padding: .4rem;
+    margin-block-end: .5rem;
+  }
+  &__location_info{
+    font-family: $font-lp;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    font-weight: 200;
+    margin-block-end: 1rem;
+  }
+  &__helpdesk{
+    margin-block-end: 1rem;
+    & p{
+      font-size: .65rem;
+    }
+    & a{
+      color: $color-typo ;
+      font-size: .6rem;
+    }
   }
   &__sponsor_box{
     width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: space-around;
+    margin-block-end: 1rem;
+
   }
   &__sponsor img{
     width: 25%;
@@ -22,29 +54,60 @@
   &__separateur{
     width: 100%;
     height: 1px;
-    background-color: white;
+    background-color: #dadada20;
+    margin-block: 1rem;
+
+  }
+  &__social{
+    font-family: $font-museo-regular;
+    color: $color-typo ;
+    & p{
+      font-size: .7rem;
+      margin-block-end: .7rem;
+    }
   }
   &__social_element{
     display: flex;
+    margin-block-start: .5em;
+    & a{
+      font-family: $font-museo-regular;
+      color: white;
+      font-size: .65rem;
+      display: flex;
+      align-content: center;
+    }
+    & i{
+      font-size: 1.2rem;
+      margin-inline: .5rem;
+      margin-block-start: -.2rem;
+    }
   }
   &__centre{
     display: none;
+  }
+  &__organisateur{
+    font-family: $font-museo-regular;
+    line-height: 1.5rem;
+    font-size: .7rem;
+    & a{
+      color: $color-typo ;
+      font-size: .7rem;
+    }
   }
 }
 @media only screen and (min-width: 1000px){
   .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-rows: 35% 30% 35% ;
     gap: 1rem;
     padding-block-start: 5rem;
     & h1{
-      font-family: $font-museo-large;
       color: $color-footer-snd;
       font-size: 1.5rem;
       margin: 0;
       margin-block-end:.5rem ;
-
+      font-family: $font-museo-large;
     }
     &__info{
       grid-area: 1/1/1/3;
@@ -52,15 +115,14 @@
     &__location{
       border: none;
       text-align: left;
-      font-family: $font-lp;
       font-weight: 600;
       font-size: 1.1rem;
       margin-block-end:.5rem ;
+      padding: 0;
     }
     &__location_info{
       border: none;
       text-align: left;
-      font-family: $font-lp;
       font-weight: 300;
       line-height: 1.7rem;
       font-size: 1.1rem;
@@ -69,18 +131,20 @@
       display: block;
       width: 100%;
       grid-area: 1/3/1/5;
+      border-radius:5px/5px;
     }
     &__sponsor{
       display: flex;
       grid-area: 2/1/2/5;
+      margin-block: 2rem;
       & img {
-        width: 15%;
+        width: 22%;
       }
     }
     &__social{
       grid-area: 3/1/3/3;
       border: 1px solid #dadada20;
-      padding: 2rem;
+      padding: 2rem 2rem 1rem 2rem;
       line-height: 2rem;
       border-radius:5px/5px;
       height: fit-content;
@@ -92,10 +156,8 @@
     }
     &__social_element{
       justify-content: space-between;
-      
       & a {
         color: white;
-
         display: flex;
         align-content: center;
         margin-block-start: 1rem;
@@ -107,18 +169,38 @@
         font-size: 2rem;
       }
     }
-
     &__helpdesk{
       grid-area: 3/3/3/4;
+      display: flex;
+      flex-direction: column;
+      margin-inline: auto;
+      margin-block-start: 2rem;
+      line-height: 1.5rem;
+      & p {
+        @include column();
+        font-size: 1.1rem;
+      }
+      & a {
+        color: $color-typo;
+        font-size: 1.1rem;
+      }
     }
     &__organisateur{
       grid-area: 3/4/3/5;
+      display: flex;
+      flex-direction: column;
+      margin-inline: auto;
+      margin-block-start: 2rem;
+      line-height: 1.5rem;
+      font-size: 1.1rem;
+      font-family: $font-museo-large;
+
+      & a {
+        color: $color-typo;
+      }
     }
     &__separateur{
       display: none;
     }
-
-
   }
-
 }

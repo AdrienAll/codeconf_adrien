@@ -19,7 +19,7 @@ $font-museo-large:"museolarge";
   flex-direction: column;
   width: 100%;
 }
-@mixin afterform($afterform-value :.5rem){
+@mixin afterform($afterform-value :.7rem){
   vertical-align: super;
   font-size:$afterform-value;
 }

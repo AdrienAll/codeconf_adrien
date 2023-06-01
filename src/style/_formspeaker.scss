@@ -3,21 +3,48 @@
   text-align: center;
   margin-inline: 1rem;
   margin-block-end: 3.5rem;
-  
+  &__titre{
+    font-family: $font-lp;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: $color;
+  }
+  &__sous_titre{
+    font-family: $font-museo-small;
+    padding-inline: 3.2rem;
+    font-size: .8rem;
+    line-height: 1.2rem;
+  }
+  &__texte{
+    font-weight: 250;
+    font-size: .65rem;
+    line-height: 1.2rem;
+  }
   &__ligne{
     @include column();
   }
   &__input{
     @include column();
-    margin-block:1rem ;
+    font-weight: 200;
+    font-size: .8rem;
   }
   &__label::after{
     content: "*";
     @include afterform();
+    color: $color;
   }
   &__userkeyword::after{
-    content: "* [separate by comma] ";
+    content: "[separate by comma]";
+    font-size: .55rem;
+    position: absolute;
+    width: 6rem;
+    margin-top: .3rem;
+  }
+  &__userkeyword span::before{
+    content: "*";
     @include afterform();
+    color: $color;
   }
   &__block {
     border: 0;
@@ -26,43 +53,58 @@
   // css pour le dernier input
   &__input{
     @include column();
-    margin-block:1rem ;
+    margin-block:.5rem ;
   }
   &__detail{
-    height: 4rem;
+    height: 5rem;
     padding: 1rem;
     border: $color-grey 1px solid;
   }
   &__labeldetail{
     margin: .5rem 0 0 .5rem;
+    font-size: .55rem;
   }
   &__labeldetail::after{
     content: "*";
     @include afterform();
+    color: $color;
   }
    &__submit{
      color: $color-btn;
      border:  1px solid $color-btn;
      background-color: white;
+     text-transform: uppercase;
      @include btn;
+     font-size: .6rem;
+     margin-block-end:1rem ;
+   }
+   &__submit_text{
+    font-family: $font-museo-small;
+    font-size: .85rem;
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 1rem;
    }
    &__ticket{
     position: absolute;
     @include column();
-    margin-block-start: 1rem;
+    margin-block-start: 2rem;
     margin-inline-start: -1rem;
   }
   &__ticket_btn{
     margin: auto;
     background-color: $color-btn;
     border: 0;
-    @include btn;
+    @include btn();
     padding-block:1rem ;
     & i {
       margin-inline: .3rem;
     }
     & a {
       color: white;
+      font-size: .8em;
+      font-weight: 700;
+
     }
   }
   &__ticket_price{
@@ -76,12 +118,14 @@
     margin-inline: auto;
   }
   }
-
-
-
+.input_margin{
+  margin-block-start: 1rem;
+}
 label {
   position:absolute;
   transition: all .2s;
+  margin-block-start: -.5rem;
+  font-size: .75rem;
 }
 div:focus-within label {
   opacity:.8;
@@ -95,12 +139,13 @@ fieldset{
     margin-inline: 7rem;
     & h1 {
       margin-block-end: 1rem;
+      font-size: 1.5rem;
     }
     & h2 {
-      margin-block:.5rem ;
+      margin-block-end:.5rem ;
     }
     & p {
-      margin-inline: auto;
+      margin-inline: 15rem;
     }
     // changement txt form large
     &__ligne{
@@ -110,6 +155,8 @@ fieldset{
     }
     &__ticket{
       margin-inline-start: -112px;
+      margin-block-start: 2rem;
     }
   }
 }
+//ajuter pour le desktop + verifier le prix y a un problem
