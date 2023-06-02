@@ -399,7 +399,7 @@ summary {
   display: none;
 }
 .teaser__background {
-  background: linear-gradient(0deg, rgb(112, 90, 233) 0%, rgb(157, 141, 244) 50%, rgb(112, 90, 233) 100%);
+  background: linear-gradient(0deg, rgb(95, 75, 232) 0%, rgb(116, 86, 232) 50%, rgb(95, 75, 232) 100%);
   grid-area: 2/1/4/6;
   order: -1;
 }
@@ -477,7 +477,14 @@ summary {
   height: 0;
 }
 .speaker__description p {
-  margin-block-start: -0.5rem;
+  margin-block-start: -0.6rem;
+  font-size: 0.8rem;
+  font-family: "leaguespartan";
+  font-weight: 200;
+}
+.speaker__description h3 {
+  font-family: "leaguespartan";
+  font-weight: 400;
 }
 .speaker__time {
   margin-block-start: 2rem;
@@ -486,10 +493,10 @@ summary {
   opacity: 0;
   width: 0;
   height: 0;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 .speaker__time a {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: black;
 }
 .speaker__btn {
@@ -501,6 +508,8 @@ summary {
   display: flex;
   margin-block-start: -0.3rem;
   border-radius: 1.5rem/1.75rem;
+  text-transform: uppercase;
+  background-color: #ffefe7;
 }
 .speaker__btn a {
   color: #f74d1c;
@@ -508,24 +517,35 @@ summary {
 .speaker__time p {
   margin-inline: 0.3rem;
 }
-.speaker img {
+.speaker__photo {
   height: 30%;
   width: 30%;
   border-radius: 100%;
   align-self: center;
   margin-inline-end: 1rem;
 }
-
-.speaker-disable {
+.speaker__row {
+  flex-direction: row !important;
+  gap: 0.2rem;
+}
+.speaker__disable {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
-.speaker-active {
+.speaker__active {
   opacity: 1;
   width: auto;
   height: auto;
+}
+
+.card-active {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #ffefe7;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -550,11 +570,21 @@ summary {
   .speaker__photo {
     order: -2;
   }
-  .speaker img {
+  .speaker__time {
+    margin-block-end: 1rem;
+  }
+  .speaker__btn {
+    padding: 0.5rem;
+    background-color: #ffefe7;
+  }
+  .speaker__photo {
     border-radius: 0;
     width: 100%;
     margin: 0;
     order: -2;
+  }
+  .speaker__disable {
+    width: 0;
   }
 }
 .footer_pad {

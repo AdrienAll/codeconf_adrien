@@ -32,7 +32,14 @@
       width: 0;
       height: 0;
       & p{
-        margin-block-start: -.5rem;
+        margin-block-start: -.6rem;
+        font-size: .8rem;
+        font-family: $font-lp;
+        font-weight: 200;
+      }
+      & h3{
+        font-family: $font-lp;
+        font-weight: 400;
       }
     }
     &__time{
@@ -42,13 +49,12 @@
       opacity: 0;
       width: 0;
       height: 0;
-      font-size: .5rem;
+      font-size: .6rem;
       & a {
-        font-size: .8rem;
+        font-size: .6rem;
         color: black;
       }
     }
-    
     &__btn{
       margin-inline-start: auto;
       border: 1px solid $color-btn;
@@ -58,6 +64,8 @@
       display: flex;
       margin-block-start: -.3rem;
       border-radius:1.5rem/1.75rem;
+      text-transform: uppercase;
+      background-color: #ffefe7;
       & a {
         color: $color-btn;
       }
@@ -65,25 +73,36 @@
     &__time p{
       margin-inline: .3rem;
     }
-    & img{
+    &__photo{
       height: 30%;
       width: 30%;
       border-radius: 100%;
       align-self: center;
       margin-inline-end:1rem ;
     }
+    &__row {
+      flex-direction: row!important;
+      gap: .2rem;
+    }
+    &__disable{
+      opacity: 0;
+      width: 0;
+      height: 0;  
+    }
+    &__active{
+      opacity: 1;
+      width: auto;
+      height: auto;  
+    }
   }
-  .speaker-disable{
-opacity: 0;
-width: 0;
-height: 0;  
+.card-active{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #ffefe7;
 }
-  .speaker-active{
-opacity: 1;
-width: auto;
-height: auto;  
-}
-
 
 @media only screen and (min-width: 1000px){
   .speaker{
@@ -109,60 +128,22 @@ height: auto;
     &__description{
     }
     &__time{
+      margin-block-end:1rem ;
     }
     &__btn{
+      padding: .5rem;
+      background-color: #ffefe7;
     }
     &__time p{
     }
-    & img{
+    &__photo{
       border-radius: 0;
       width: 100%;
       margin: 0 ;
       order: -2;
     }
   }
+  .speaker__disable {
+    width: 0;
+  }
 }
-
-
-// save
-// .speaker{
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit,minmax(13rem,1fr)); 
-//   margin-inline: 1rem;
-//   list-style: none;
-//   padding: 0%;
-//   gap: 1rem;
-//   &__card{
-//     list-style: none;
-//     aspect-ratio: 0.75;
-//     padding: 1rem;
-//     &__profil{
-//       display: flex;
-//       justify-content: space-between;
-//     }
-//     &__profil h2{
-//       display: flex;
-//       flex-direction: column;
-//     }
-//     &__description{
-//     }
-//     &__time{
-//       display: flex;
-//       justify-content: baseline;
-//       &__btn{
-//         margin-inline-start: auto;
-//         border: 1px solid black;
-//       }
-//     }
-//     &__time p{
-//       margin: 0;
-//     }
-//   }
-//   }
-// .speaker img{
-//   height: 30%;
-//   width: 30%;
-//   border-radius: 100%;
-//   align-self: center;
-//   margin-inline-end:1rem ;
-// }
