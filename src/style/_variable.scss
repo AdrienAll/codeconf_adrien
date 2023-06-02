@@ -5,6 +5,8 @@ $color-typo:#d9c8b8;
 $color-btn:#f74d1c;
 $color-grey:#dadada;
 $color-footer-snd:#0cbfc3;
+$color-bg:#f9f9f9;
+$color-sndtypo:#4a4267;
 //value
 $tier-value:calc(100%/3);
 //font
@@ -17,7 +19,6 @@ $font-museo-large:"museolarge";
 @mixin column {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 @mixin afterform($afterform-value :.7rem){
   vertical-align: super;

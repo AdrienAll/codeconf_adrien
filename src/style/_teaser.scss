@@ -1,29 +1,66 @@
 .teaser {
   width: 100%;
   display: grid;
-  margin-block-start: -3rem;
   grid-template-rows:$tier-value $tier-value $tier-value ;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-block-start: -1rem;
   // grid-template-rows: @include $tier-value;
   // noter les colonnes et les lignes
   //utiliser une mixin et une fonction calcul pour les 33%
   &__slogan {
-    grid-area: 2/1/4/4;
+    grid-area: 2/2/4/6;
     order: 1;
     font-size: 1.5rem;
-    margin-block:0 ;
-    margin-inline-start:1rem ;
+    margin-block-start:1.2rem ;
+    margin-inline-start:-1rem ;
     color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-museo-large;
     // a ajuster avec les colones et l'order
   }
+  &__sous_slogan{
+    display: none;
+  }
   &__background{
-    background-color:$color ;
+    background:linear-gradient(0deg, rgba(112,90,233,1) 0%, rgba(157,141,244,1) 50%, rgba(112,90,233,1) 100%); ;
     grid-area: 2/1/4/6;
     order: -1;
   }
   &__image {
     grid-area: 1/2/4/6;
-    max-width: 50%;
+    width: 60%;
   }
 }
-//A terminer plus tard !!!!!
+@media only screen and (min-width: 1000px){
+  .teaser {
+    margin-block-start: -3rem;
+    height: 232.441px;
+    &__image {
+      grid-area: 1/2/4/6;
+      width: 237.801px;
+    }
+    &__slogan {
+      display: flex;
+      flex-direction: row;
+      grid-area: 3/3/4/6;
+      margin-inline: 0;
+      margin-block: 0;
+      margin-block-start: -2rem;
+      margin-inline-start: 5rem;
+      gap: 7px;
+      font-size: 2.3rem;
+    }
+    &__sous_slogan{
+      display: inline;
+      grid-area: 3/3/4/6;
+      margin-block-start: 1rem;
+      color: white;
+      margin-inline-start: 5rem;
+      font-family: $font-museo-small;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      width: 70%;
+    }
+  }
+}

@@ -19,7 +19,6 @@
           <li><a href="#">Team</a></li>
           <li>| </li>
           <li><a href="#">Contact</a></li>
-          <li>| </li>
       </div>
         <li><a href="#"><i class="icon-schedule"></i></a></li>
         <li class="nav__schedule"><a href="#">Schedule</a></li>
@@ -29,7 +28,8 @@
      </ul> 
     </nav>
       <div class="teaser">
-        <h1  class="teaser__slogan">Speaker Edition 2023</h1>
+        <h1  class="teaser__slogan">Speaker <span> Edition 2023</span></h1>
+        <h2 class="teaser__sous_slogan">Discover the speakers and the topics or suggest your own topic for our next event</h2> 
         <img src="/dist/image/speaker_picture/presents.png" alt="speaker" class="teaser__image">
         <div class="teaser__background"></div>
       </div>
@@ -44,18 +44,19 @@
     <ul class="speaker">
       <li class="speaker__card">
          <div class="speaker__profil">
-           <div class="speaker__info">
-             <h2>Chris <strong>Coyier</strong></h2>
-             <p>Milwaukee, WI</p>
+           <div class="speaker__info ">
+             <h2>Chris <span>Coyier</span></h2>
+             <p class="speaker-disable">Milwaukee, WI</p>
            </div>
-           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
+           <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__photo speaker-disable">
          </div>
-         <div class="speaker__description">
+         <div class="speaker__description speaker-active">
            <h3>The All-Powerful Front-End Developer</h3>
            <p>Without servers, we'd have no way to share our creations with the world</p>
          </div>
-         <div class="speaker__time">
-           <p>09:30 am |</p>
+         <div class="speaker__time speaker-active">
+           <time>09:30 am </time>
+           <p>|</p>
            <a href="#">R2</a>
            <button class="speaker__btn"><a href="#">About</a></button>
          </div>
@@ -63,10 +64,10 @@
       <li class="speaker__card">
         <div class="speaker__profil">
           <div class="speaker__info">
-            <h2>Chris <strong>Coyier</strong></h2>
+            <h2>Chris <span>Coyier</span></h2>
             <p>Milwaukee, WI</p>
           </div>
-          <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
+          <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__photo">
         </div>
         <div class="speaker__description">
           <h3>The All-Powerful Front-End Developer</h3>
@@ -78,44 +79,6 @@
           <button class="speaker__btn"><a href="#">About</a></button>
         </div>
      </li>
-     <li class="speaker__card">
-      <div class="speaker__profil">
-        <div class="speaker__info">
-          <h2>Chris <strong>Coyier</strong></h2>
-          <p>Milwaukee, WI</p>
-        </div>
-        <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
-      </div>
-      <div class="speaker__description">
-        <h3>The All-Powerful Front-End Developer</h3>
-        <p>Without servers, we'd have no way to share our creations with the world</p>
-      </div>
-      <div class="speaker__time">
-        <p>09:30 am |</p>
-        <a href="#">R2</a>
-        <button class="speaker__btn"><a href="#">About</a></button>
-      </div>
-   </li>
-   <li class="speaker__card">
-    <div class="speaker__profil">
-      <div class="speaker__info">
-        <h2>Chris <strong>Coyier</strong></h2>
-        <p>Milwaukee, WI</p>
-      </div>
-      <img src="/dist/image/speaker_picture/chris@3x.jpg" alt="" class="speaker__card__profil__photo">
-    </div>
-    <div class="speaker__description">
-      <h3>The All-Powerful Front-End Developer</h3>
-      <p>Without servers, we'd have no way to share our creations with the world</p>
-    </div>
-    <div class="speaker__time">
-      <p>09:30 am |</p>
-      <a href="#">R2</a>
-      <button class="speaker__btn"><a href="#">About</a></button>
-    </div>
- </li>
-      
-
     </ul>
   </main>
   <section class="formspeaker">
@@ -194,6 +157,13 @@
     </div> 
   </footer>
 </body>
+<script>
+  let card = document.querySelector(".speaker__card");
+  document.querySelector('.speaker__card').addEventListener("click", (event) => {
+  
+
+  }
+</script>
 </html>
 <!-- fiche -->
     <!-- <div>

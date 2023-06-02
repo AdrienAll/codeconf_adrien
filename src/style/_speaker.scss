@@ -1,41 +1,69 @@
 .speaker{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(13rem,1fr)); 
-  margin-inline: 1rem;
   list-style: none;
   padding: 0%;
-  gap: 0.5rem;
     &__card{
       list-style: none;
+      background-color: $color-bg;
     }
     &__profil{
       display: flex;
       justify-content: space-between;
     }
     &__info p{
-      color: $color-grey;
+      color: #a6a2b3;
+      font-family: $font-lp;
+      font-weight: 200;
+      font-size: .85rem;
+      margin-inline-start: 1rem;
     }
     &__profil h2{
       @include column();
+      font-family: $font-museo-small;
+      font-weight: 400;
+      font-size: 1rem;
+      margin-inline-start: 1rem;
+      color: $color-sndtypo;
     }
     &__description{
+      margin-inline: 1rem;
       opacity: 0;
       width: 0;
       height: 0;
+      & p{
+        margin-block-start: -.5rem;
+      }
     }
     &__time{
+      margin-block-start: 2rem;
+      margin-inline: 1rem;
       display: flex;
-      justify-content: baseline;
       opacity: 0;
       width: 0;
       height: 0;
+      font-size: .5rem;
+      & a {
+        font-size: .8rem;
+        color: black;
+      }
     }
+    
     &__btn{
       margin-inline-start: auto;
-      border: 1px solid black;
+      border: 1px solid $color-btn;
+      padding-inline-start:3rem ;
+      padding-inline-end: 1rem;
+      padding-block: .3rem;
+      display: flex;
+      margin-block-start: -.3rem;
+      border-radius:1.5rem/1.75rem;
+      & a {
+        color: $color-btn;
+      }
     }
     &__time p{
-      margin: 0;
+      margin-inline: .3rem;
     }
     & img{
       height: 30%;
@@ -45,17 +73,35 @@
       margin-inline-end:1rem ;
     }
   }
+  .speaker-disable{
+opacity: 0;
+width: 0;
+height: 0;  
+}
+  .speaker-active{
+opacity: 1;
+width: auto;
+height: auto;  
+}
 
 
 @media only screen and (min-width: 1000px){
   .speaker{
     gap: 2rem;
+    margin-inline: 2rem;
      &__card{
-     border:1px solid black;
      aspect-ratio: 0.75;
     }
     &__profil{
       flex-direction: column;
+    }
+    &__profil h2{
+      font-family: $font-museo-regular;
+      font-size: 1.5rem;
+      margin-block-end: .5rem;
+    }
+    &__profil p {
+      font-size: 1.2rem;
     }
     &__photo{
       order:-2;
@@ -72,6 +118,7 @@
       border-radius: 0;
       width: 100%;
       margin: 0 ;
+      order: -2;
     }
   }
 }

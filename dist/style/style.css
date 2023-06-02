@@ -333,6 +333,14 @@ summary {
   gap: 1rem;
 }
 
+.nav a {
+  color: black;
+}
+
+.icon-loop {
+  color: #f74d1c;
+}
+
 .breadcrumb {
   display: flex;
   gap: 0.5rem;
@@ -340,6 +348,9 @@ summary {
 }
 .breadcrumb__fraction {
   margin-block: 0;
+}
+.breadcrumb i {
+  color: #f74d1c;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -369,69 +380,133 @@ summary {
 .teaser {
   width: 100%;
   display: grid;
-  margin-block-start: -3rem;
   grid-template-rows: 33.3333333333% 33.3333333333% 33.3333333333%;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-block-start: -1rem;
 }
 .teaser__slogan {
-  grid-area: 2/1/4/4;
+  grid-area: 2/2/4/6;
   order: 1;
   font-size: 1.5rem;
-  margin-block: 0;
-  margin-inline-start: 1rem;
+  margin-block-start: 1.2rem;
+  margin-inline-start: -1rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "museolarge";
+}
+.teaser__sous_slogan {
+  display: none;
 }
 .teaser__background {
-  background-color: #705ae9;
+  background: linear-gradient(0deg, rgb(112, 90, 233) 0%, rgb(157, 141, 244) 50%, rgb(112, 90, 233) 100%);
   grid-area: 2/1/4/6;
   order: -1;
 }
 .teaser__image {
   grid-area: 1/2/4/6;
-  max-width: 50%;
+  width: 60%;
 }
 
+@media only screen and (min-width: 1000px) {
+  .teaser {
+    margin-block-start: -3rem;
+    height: 232.441px;
+  }
+  .teaser__image {
+    grid-area: 1/2/4/6;
+    width: 237.801px;
+  }
+  .teaser__slogan {
+    display: flex;
+    flex-direction: row;
+    grid-area: 3/3/4/6;
+    margin-inline: 0;
+    margin-block: 0;
+    margin-block-start: -2rem;
+    margin-inline-start: 5rem;
+    gap: 7px;
+    font-size: 2.3rem;
+  }
+  .teaser__sous_slogan {
+    display: inline;
+    grid-area: 3/3/4/6;
+    margin-block-start: 1rem;
+    color: white;
+    margin-inline-start: 5rem;
+    font-family: "museosmall";
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    width: 70%;
+  }
+}
 .speaker {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  margin-inline: 1rem;
   list-style: none;
   padding: 0%;
-  gap: 0.5rem;
 }
 .speaker__card {
   list-style: none;
+  background-color: #f9f9f9;
 }
 .speaker__profil {
   display: flex;
   justify-content: space-between;
 }
 .speaker__info p {
-  color: #dadada;
+  color: #a6a2b3;
+  font-family: "leaguespartan";
+  font-weight: 200;
+  font-size: 0.85rem;
+  margin-inline-start: 1rem;
 }
 .speaker__profil h2 {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  font-family: "museosmall";
+  font-weight: 400;
+  font-size: 1rem;
+  margin-inline-start: 1rem;
+  color: #4a4267;
 }
 .speaker__description {
+  margin-inline: 1rem;
   opacity: 0;
   width: 0;
   height: 0;
 }
+.speaker__description p {
+  margin-block-start: -0.5rem;
+}
 .speaker__time {
+  margin-block-start: 2rem;
+  margin-inline: 1rem;
   display: flex;
-  justify-content: baseline;
   opacity: 0;
   width: 0;
   height: 0;
+  font-size: 0.5rem;
+}
+.speaker__time a {
+  font-size: 0.8rem;
+  color: black;
 }
 .speaker__btn {
   margin-inline-start: auto;
-  border: 1px solid black;
+  border: 1px solid #f74d1c;
+  padding-inline-start: 3rem;
+  padding-inline-end: 1rem;
+  padding-block: 0.3rem;
+  display: flex;
+  margin-block-start: -0.3rem;
+  border-radius: 1.5rem/1.75rem;
+}
+.speaker__btn a {
+  color: #f74d1c;
 }
 .speaker__time p {
-  margin: 0;
+  margin-inline: 0.3rem;
 }
 .speaker img {
   height: 30%;
@@ -441,16 +516,36 @@ summary {
   margin-inline-end: 1rem;
 }
 
+.speaker-disable {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.speaker-active {
+  opacity: 1;
+  width: auto;
+  height: auto;
+}
+
 @media only screen and (min-width: 1000px) {
   .speaker {
     gap: 2rem;
+    margin-inline: 2rem;
   }
   .speaker__card {
-    border: 1px solid black;
     aspect-ratio: 0.75;
   }
   .speaker__profil {
     flex-direction: column;
+  }
+  .speaker__profil h2 {
+    font-family: "museoregular";
+    font-size: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
+  .speaker__profil p {
+    font-size: 1.2rem;
   }
   .speaker__photo {
     order: -2;
@@ -459,6 +554,7 @@ summary {
     border-radius: 0;
     width: 100%;
     margin: 0;
+    order: -2;
   }
 }
 .footer_pad {
@@ -612,6 +708,7 @@ summary {
     line-height: 2rem;
     border-radius: 5px/5px;
     height: fit-content;
+    margin-inline-start: 1.5rem;
   }
   .footer__social p {
     font-size: 1.3rem;
@@ -644,7 +741,6 @@ summary {
   .footer__helpdesk p {
     display: flex;
     flex-direction: column;
-    width: 100%;
     font-size: 1.1rem;
   }
   .footer__helpdesk a {
@@ -682,9 +778,10 @@ summary {
 }
 .formspeaker__sous_titre {
   font-family: "museosmall";
-  padding-inline: 3.2rem;
   font-size: 0.8rem;
   line-height: 1.2rem;
+  width: 67%;
+  margin-inline: auto;
 }
 .formspeaker__texte {
   font-weight: 250;
@@ -694,12 +791,11 @@ summary {
 .formspeaker__ligne {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .formspeaker__input {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  width: 100%;
   font-weight: 200;
   font-size: 0.8rem;
 }
@@ -729,7 +825,6 @@ summary {
 .formspeaker__input {
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-block: 0.5rem;
 }
 .formspeaker__detail {
@@ -769,9 +864,9 @@ summary {
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin-block-start: 2rem;
   margin-inline-start: -1rem;
+  width: 100%;
 }
 .formspeaker__ticket_btn {
   margin: auto;
@@ -825,15 +920,17 @@ fieldset {
   .formspeaker {
     margin-inline: 7rem;
   }
-  .formspeaker h1 {
+  .formspeaker__titre {
     margin-block-end: 1rem;
     font-size: 1.5rem;
   }
-  .formspeaker h2 {
+  .formspeaker__sous_titre {
     margin-block-end: 0.5rem;
   }
-  .formspeaker p {
-    margin-inline: 15rem;
+  .formspeaker__texte {
+    width: 20rem;
+    margin-inline: auto;
+    margin-block-start: -0.3rem;
   }
   .formspeaker__ligne {
     display: flex;
@@ -842,6 +939,12 @@ fieldset {
   }
   .formspeaker__ticket {
     margin-inline-start: -112px;
+    margin-block-start: 2rem;
+  }
+  .formspeaker__submit {
+    margin-block-start: 1rem;
+  }
+  .input_margin {
     margin-block-start: 2rem;
   }
 }

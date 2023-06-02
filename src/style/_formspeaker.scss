@@ -12,9 +12,10 @@
   }
   &__sous_titre{
     font-family: $font-museo-small;
-    padding-inline: 3.2rem;
     font-size: .8rem;
     line-height: 1.2rem;
+    width: 67%;
+    margin-inline: auto;
   }
   &__texte{
     font-weight: 250;
@@ -25,6 +26,7 @@
     @include column();
   }
   &__input{
+    flex-grow: 1;
     @include column();
     font-weight: 200;
     font-size: .8rem;
@@ -90,6 +92,7 @@
     @include column();
     margin-block-start: 2rem;
     margin-inline-start: -1rem;
+    width: 100%;
   }
   &__ticket_btn{
     margin: auto;
@@ -137,15 +140,17 @@ fieldset{
 @media only screen and (min-width: 1000px){
   .formspeaker{
     margin-inline: 7rem;
-    & h1 {
+    &__titre {
       margin-block-end: 1rem;
       font-size: 1.5rem;
     }
-    & h2 {
+    &__sous_titre {
       margin-block-end:.5rem ;
     }
-    & p {
-      margin-inline: 15rem;
+    &__texte{
+      width: 20rem;
+      margin-inline:auto ;
+      margin-block-start:-.3rem;
     }
     // changement txt form large
     &__ligne{
@@ -157,6 +162,12 @@ fieldset{
       margin-inline-start: -112px;
       margin-block-start: 2rem;
     }
+    &__submit{
+      margin-block-start:1rem ;
+    }
+  }
+  .input_margin{
+    margin-block-start: 2rem;
   }
 }
 //ajuter pour le desktop + verifier le prix y a un problem
